@@ -37,25 +37,23 @@
     text-transform:uppercase;
   }
   .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-    gap:4px;
-    padding:4px;
+    columns:3 320px;
+    column-gap:16px;
+    padding:16px;
     max-width:1400px;
     margin:0 auto;
   }
   .grid figure{
-    margin:0;
+    margin:0 0 16px;
     position:relative;
     overflow:hidden;
-    aspect-ratio:1/1;
+    break-inside:avoid;
     background:var(--line);
     cursor:pointer;
   }
   .grid img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto;
     display:block;
     transition:transform 0.4s ease;
   }
@@ -147,7 +145,8 @@
   // ---- EDIT THIS LIST: add your image filenames here ----
   // Put your images in an "images" folder next to this file.
   const images = [
-    { src: "images/g_stamp_human_space_flight.png", caption: "India Human Space Programme(AXIOM MISSION)" }
+    { src: "g_stamp_human_space_flight.png", caption: "India Human Space Programme(AXIOM MISSION)"  },
+  
   ];
   // ---------------------------------------------------------
 
