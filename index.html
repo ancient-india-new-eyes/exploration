@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anjaneya Labs</title>
+<title>Gallery</title>
 <style>
   :root{
     --ink:#1c1b19;
@@ -37,23 +37,25 @@
     text-transform:uppercase;
   }
   .grid{
-    columns:3 320px;
-    column-gap:16px;
-    padding:16px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:4px;
+    padding:4px;
     max-width:1400px;
     margin:0 auto;
   }
   .grid figure{
-    margin:0 0 16px;
+    margin:0;
     position:relative;
     overflow:hidden;
-    break-inside:avoid;
+    aspect-ratio:1/1;
     background:var(--line);
     cursor:pointer;
   }
   .grid img{
     width:100%;
-    height:auto;
+    height:100%;
+    object-fit:cover;
     display:block;
     transition:transform 0.4s ease;
   }
@@ -127,6 +129,7 @@
 
 <header>
   <h1>Gallery</h1>
+  <p>A Stamp Collection by Anjaneya Labs</p>
 </header>
 
 <div class="grid" id="grid"></div>
@@ -138,14 +141,13 @@
   <button class="lightbox-nav lightbox-next" id="lbNext">&#8250;</button>
 </div>
 
-<footer>© 2026 Anjaneya Labs. All rights reserved.</footer>
+<footer>© 2026 Anjaneya Labs. All rights reserved</footer>
 
 <script>
   // ---- EDIT THIS LIST: add your image filenames here ----
   // Put your images in an "images" folder next to this file.
   const images = [
-    { src: "images/g_stamp_human_space_flight_updated.png", caption: "India Human Space Programme(AXIOM MISSION)"  },
-  
+    { src: "images/g_stamp_human_space_flight.png", caption: "India Human Space Programme(AXIOM MISSION)},
   ];
   // ---------------------------------------------------------
 
